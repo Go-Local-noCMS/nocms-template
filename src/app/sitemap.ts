@@ -1,24 +1,42 @@
+import { careTypes } from "@/data/care-types";
+import { lifeHereSections } from "@/data/life-here";
+import { resourcePages } from "@/data/resources-pages";
+import { blogPosts } from "@/data/blog-posts";
 import type { MetadataRoute } from "next";
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://www.example.com";
+const BASE_URL = process.env.SITE_URL ?? "https://example.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const pages = [
-    { url: "/", changeFrequency: "weekly" as const, priority: 1.0 },
-    { url: "/communities", changeFrequency: "weekly" as const, priority: 0.9 },
-    { url: "/independent-living", changeFrequency: "monthly" as const, priority: 0.8 },
-    { url: "/assisted-living", changeFrequency: "monthly" as const, priority: 0.8 },
-    { url: "/memory-care", changeFrequency: "monthly" as const, priority: 0.8 },
-    { url: "/about", changeFrequency: "monthly" as const, priority: 0.6 },
-    { url: "/contact", changeFrequency: "monthly" as const, priority: 0.7 },
-    { url: "/faq", changeFrequency: "monthly" as const, priority: 0.7 },
-    { url: "/blog", changeFrequency: "weekly" as const, priority: 0.6 },
+  const staticPages = [
+    "",
+    "/about",
+    "/about/our-team",
+    "/contact",
+    "/schedule-tour",
+    "/pricing",
+    "/living-options",
+    "/life-here",
+    "/resources",
+    "/resources/blog",
   ];
 
-  return pages.map((page) => ({
-    url: `${BASE_URL}${page.url}`,
+  const careTypePages = careTypes.map((ct) => `/living-options/${ct.slug}`);
+  const lifeHerePages = lifeHereSections.map((s) => `/life-here/${s.slug}`);
+  const resourceSubPages = resourcePages.map((r) => `/resources/${r.slug}`);
+  const blogPages = blogPosts.map((p) => `/resources/blog/${p.slug}`);
+
+  const allPages = [
+    ...staticPages,
+    ...careTypePages,
+    ...lifeHerePages,
+    ...resourceSubPages,
+    ...blogPages,
+  ];
+
+  return allPages.map((path) => ({
+    url: `${BASE_URL}${path}`,
     lastModified: new Date(),
-    changeFrequency: page.changeFrequency,
-    priority: page.priority,
+    changeFrequency: path === "" ? "weekly" : "monthly",
+    priority: path === "" ? 1.0 : path.split("/").length <= 2 ? 0.8 : 0.6,
   }));
 }

@@ -1,62 +1,68 @@
-export interface FaqCategory {
-  title: string;
-  items: { question: string; answer: string }[];
+export interface FaqItem {
+  question: string;
+  answer: string;
+  category: string;
 }
 
-export const faqCategories: FaqCategory[] = [
+export const faqItems: FaqItem[] = [
   {
-    title: "Getting Started",
-    items: [
-      {
-        question: "How do I know when it's time to consider senior living?",
-        answer: "Common signs include difficulty managing daily activities like cooking or personal care, increased isolation, safety concerns at home such as falls, or caregiver burnout. We recommend scheduling a complimentary care assessment where our team can help evaluate needs and explore options together.",
-      },
-      {
-        question: "What's the difference between independent living, assisted living, and memory care?",
-        answer: "Independent living is for active seniors who want a maintenance-free lifestyle with amenities. Assisted living provides personalized support with daily activities while maintaining independence. Memory care offers specialized, secure environments for those with Alzheimer's or dementia.",
-      },
-      {
-        question: "Can I tour a community before deciding?",
-        answer: "Absolutely. We encourage families to visit, meet the team, join for a meal, and experience the atmosphere. We offer in-person and virtual tours seven days a week with no pressure.",
-      },
-    ],
+    question: "What is the difference between independent living and assisted living?",
+    answer: "Independent living is designed for active seniors who want a maintenance-free lifestyle with social activities and amenities. Assisted living provides additional daily support such as medication management, bathing, dressing, and meal preparation for those who need help with activities of daily living.",
+    category: "General",
   },
   {
-    title: "Costs & Planning",
-    items: [
-      {
-        question: "How much does senior living at Golden Grove cost?",
-        answer: "Costs vary by care level, apartment size, and location. Independent living typically starts from $2,400/month, assisted living from $3,200, and memory care from $4,500. Rates are all-inclusive covering housing, meals, activities, and care services.",
-      },
-      {
-        question: "Does Medicare or insurance cover senior living?",
-        answer: "Medicare does not typically cover long-term residential care. However, long-term care insurance, veterans' benefits (Aid & Attendance), and certain Medicaid programs may help. Our financial advisors can help explore all available options.",
-      },
-      {
-        question: "Are there additional fees beyond the monthly rate?",
-        answer: "Our pricing is transparent and all-inclusive. The rate covers your residence, meals, utilities, housekeeping, activities, and basic care. Additional services like specialized therapies or salon services carry modest charges, always disclosed upfront.",
-      },
-    ],
+    question: "Can my loved one transition between care levels?",
+    answer: "Absolutely. Our community offers a continuum of care, allowing residents to transition seamlessly between independent living, assisted living, and memory care as needs evolve. Our care team conducts regular assessments and works with families to adjust care plans proactively.",
+    category: "General",
   },
   {
-    title: "Daily Life",
-    items: [
-      {
-        question: "What does a typical day look like?",
-        answer: "Every day is different, and residents choose their level of participation. A day might include morning exercise, chef-prepared breakfast, an art class, lunch with friends, a garden walk, happy hour, restaurant-style dinner, and evening entertainment. Over 200 activities monthly.",
-      },
-      {
-        question: "Can residents personalize their living spaces?",
-        answer: "Yes! We encourage residents to bring furniture, artwork, and personal items. Our team assists with arranging the space, and we accommodate most modifications for comfort.",
-      },
-      {
-        question: "What about dining and dietary needs?",
-        answer: "Executive chefs prepare restaurant-quality meals three times daily with fresh, seasonal ingredients. We accommodate all dietary needs including vegetarian, gluten-free, diabetic-friendly, and kosher or halal options. A bistro is available for snacks throughout the day.",
-      },
-      {
-        question: "Can family members visit at any time?",
-        answer: "Family is central to everything we do. Visitors are welcome during generous visiting hours. We offer guest suites, private dining rooms, and outdoor spaces for gatherings, plus regular family events and a digital portal for staying connected.",
-      },
-    ],
+    question: "Are pets allowed in the community?",
+    answer: "Yes! We are a pet-friendly community. We know that pets are family. We welcome cats and dogs with some size and breed considerations. Our grounds include pet-friendly walking paths and a designated pet relief area.",
+    category: "General",
+  },
+  {
+    question: "How much does senior living cost?",
+    answer: "Costs vary based on the level of care, room type, and services needed. Independent living starts around $3,200/month, assisted living from $4,500/month, and memory care from $5,800/month. We offer transparent pricing with no hidden fees.",
+    category: "Costs & Financial",
+  },
+  {
+    question: "Does insurance or Medicare cover senior living costs?",
+    answer: "Medicare generally does not cover long-term senior living costs. However, Medicaid may cover some assisted living expenses depending on your state. Long-term care insurance, VA benefits, and bridge loans are other options. Our financial counselors can help you explore all available resources.",
+    category: "Costs & Financial",
+  },
+  {
+    question: "Are there financial assistance programs available?",
+    answer: "Yes, several programs may help offset costs including Medicaid waivers, Veterans Aid and Attendance benefits, long-term care insurance, and state-specific assistance programs. We also offer flexible payment plans. Our team will help identify programs you may qualify for.",
+    category: "Costs & Financial",
+  },
+  {
+    question: "What does a typical day look like for residents?",
+    answer: "Every day is different and tailored to personal preferences. A typical day might include a morning fitness class, a chef-prepared breakfast, a group activity or outing, lunch with friends, an afternoon art workshop or lecture, dinner, and an evening social or entertainment event. Residents are free to participate as much or as little as they choose.",
+    category: "Daily Life",
+  },
+  {
+    question: "What activities and amenities are available?",
+    answer: "We offer 200+ monthly activities including fitness classes, art workshops, live entertainment, educational lectures, gardening, book clubs, game nights, and excursions. Amenities include a fitness center, heated pool, salon and spa, library, theater room, art studio, and beautifully landscaped grounds.",
+    category: "Daily Life",
+  },
+  {
+    question: "What dining options are available?",
+    answer: "Our award-winning dining program features three chef-prepared meals daily plus snacks. We accommodate dietary restrictions, allergies, and preferences including vegetarian, low-sodium, diabetic-friendly, and heart-healthy options. Our dining room offers restaurant-style service in a welcoming atmosphere.",
+    category: "Daily Life",
+  },
+  {
+    question: "Can I tour the community before making a decision?",
+    answer: "Absolutely! We welcome and encourage tours seven days a week. During your visit, you will meet our staff, tour available floor plans, enjoy a complimentary meal, observe activities in action, and get a genuine feel for life in our community. Virtual tours are also available.",
+    category: "Moving In",
+  },
+  {
+    question: "What should I bring when moving in?",
+    answer: "We encourage residents to bring personal furnishings, photos, and meaningful items to make their apartment feel like home. Apartments come with basic furnishings, but most families prefer to personalize the space. Our move-in coordinator will help plan every detail.",
+    category: "Moving In",
+  },
+  {
+    question: "How quickly can my loved one move in?",
+    answer: "In most cases, we can accommodate a move-in within one to two weeks after completing the application and assessment. Emergency or urgent placements may be available even sooner. Our admissions team works closely with families to make the transition as smooth as possible.",
+    category: "Moving In",
   },
 ];
