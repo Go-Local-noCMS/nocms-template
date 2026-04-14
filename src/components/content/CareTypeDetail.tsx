@@ -1,4 +1,4 @@
-import { Check, Star, ArrowRight, Shield, Heart, Users, Home } from "lucide-react";
+import { Check, Star, ArrowRight, Shield, Heart, Users, Home, Clock } from "lucide-react";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { SectionWrapper } from "@/components/layout/SectionWrapper";
@@ -38,6 +38,7 @@ const iconMap: Record<string, React.ElementType> = {
   home: Home,
   star: Star,
   check: Check,
+  clock: Clock,
 };
 
 export function CareTypeDetail({ careType }: CareTypeDetailProps) {

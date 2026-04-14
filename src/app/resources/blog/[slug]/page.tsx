@@ -1,6 +1,8 @@
 import { blogPosts } from "@/data/blog-posts";
 import { notFound } from "next/navigation";
 
+export const dynamic = "force-static";
+
 export function generateStaticParams() {
   return blogPosts.map((post) => ({ slug: post.slug }));
 }
