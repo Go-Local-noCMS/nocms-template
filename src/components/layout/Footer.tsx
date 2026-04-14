@@ -105,11 +105,6 @@ export function Footer({
             &copy; {new Date().getFullYear()} {brandName}. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
-            <div className="flex items-center gap-4 text-xs text-white/50">
-              <a href="/privacy" className="hover:text-white/80 transition-colors">Privacy Policy</a>
-              <a href="/terms" className="hover:text-white/80 transition-colors">Terms of Use</a>
-              <a href="/accessibility" className="hover:text-white/80 transition-colors">Accessibility</a>
-            </div>
             <div className="flex items-center gap-3">
               {socialLinks.map((social) => {
                 const Icon = iconMap[social.platform];

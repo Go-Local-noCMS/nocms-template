@@ -1,4 +1,10 @@
 import { blogPosts } from "@/data/blog-posts";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Blog | Senior Living",
+  description: "Articles, guides, and insights about senior living, wellness, and community life.",
+};
 
 export default function BlogPage() {
   if (blogPosts.length === 0) {
