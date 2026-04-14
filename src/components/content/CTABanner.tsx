@@ -16,7 +16,7 @@ interface CTABannerProps {
 
 const variantClasses: Record<string, string> = {
   primary: "bg-primary text-white",
-  dark: "bg-[#333] text-white",
+  dark: "bg-rich-brown text-white",
   accent: "bg-accent text-white",
 };
 

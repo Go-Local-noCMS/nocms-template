@@ -143,7 +143,7 @@ export function Navbar({
             </a>
             <a
               href={ctaHref}
-              className="bg-accent text-white font-semibold px-5 py-2.5 rounded-md text-sm shadow-md hover:opacity-90 hover:shadow-lg hover:-translate-y-0.5 transition-all focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-primary"
+              className="bg-sand text-primary-dark font-semibold px-5 py-2.5 rounded-md text-sm shadow-md hover:bg-background hover:shadow-lg hover:-translate-y-0.5 transition-all focus-visible:ring-2 focus-visible:ring-sand focus-visible:ring-offset-2 focus-visible:ring-offset-primary"
             >
               {ctaText}
             </a>

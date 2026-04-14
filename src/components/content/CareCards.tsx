@@ -73,7 +73,7 @@ export function CareCards({
 
             {/* Content */}
             <div className="absolute bottom-0 left-0 right-0 p-6 z-[2]">
-              <Badge variant="primary" className="mb-3 bg-primary/20 text-white backdrop-blur-sm">
+              <Badge variant="primary" className="mb-3 bg-primary-light/30 text-white backdrop-blur-sm">
                 {care.tag}
               </Badge>
               <h3 className="font-heading text-2xl font-bold text-white mb-2">

@@ -95,7 +95,7 @@ export function PricingCards({
               key={plan.name}
               className={`relative rounded-xl border p-8 flex flex-col transition-shadow hover:shadow-lg ${
                 plan.featured
-                  ? "border-primary shadow-md ring-2 ring-primary/20 bg-background"
+                  ? "border-primary shadow-md ring-2 ring-primary-light bg-background"
                   : "border-text/10 bg-surface"
               }`}
             >

@@ -5,9 +5,9 @@ interface BadgeProps {
 }
 
 const variantClasses: Record<string, string> = {
-  primary: "bg-primary/10 text-primary",
-  secondary: "bg-secondary/10 text-secondary",
-  accent: "bg-accent/10 text-accent",
+  primary: "bg-primary-light text-primary-dark",
+  secondary: "bg-secondary-light text-secondary-dark",
+  accent: "bg-accent-light text-accent",
   muted: "bg-text/5 text-muted",
 };
 

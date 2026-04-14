@@ -43,7 +43,7 @@ export function StatsBar({ stats = defaultStats, className = "" }: StatsBarProps
   return (
     <section
       ref={containerRef}
-      className={`bg-primary py-12 lg:py-16 ${className}`}
+      className={`bg-primary-dark py-12 lg:py-16 ${className}`}
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">

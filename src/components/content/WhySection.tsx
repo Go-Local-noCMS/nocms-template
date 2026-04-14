@@ -79,7 +79,7 @@ export function WhySection({
           {subtitle && <p className="text-muted mb-12">{subtitle}</p>}
 
           <div className="bg-background rounded-2xl p-10 shadow-sm border border-text/5 min-h-[240px] flex flex-col items-center justify-center">
-            <div className="h-16 w-16 rounded-2xl bg-primary/10 flex items-center justify-center mb-6">
+            <div className="h-16 w-16 rounded-2xl bg-primary-light flex items-center justify-center mb-6">
               <Icon className="h-8 w-8 text-primary" aria-hidden="true" />
             </div>
             <h3 className="font-heading text-2xl font-bold text-text mb-3">{reason.title}</h3>
@@ -127,7 +127,7 @@ export function WhySection({
                 key={reason.title}
                 className="bg-background rounded-xl p-8 border border-text/5 hover:shadow-md transition-shadow"
               >
-                <div className="h-14 w-14 rounded-xl bg-primary/10 flex items-center justify-center mb-5">
+                <div className="h-14 w-14 rounded-xl bg-primary-light flex items-center justify-center mb-5">
                   <Icon className="h-7 w-7 text-primary" aria-hidden="true" />
                 </div>
                 <h3 className="font-heading text-lg font-bold text-text mb-2">{reason.title}</h3>
