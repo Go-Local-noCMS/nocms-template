@@ -43,7 +43,7 @@ export function StatsBar({ stats = defaultStats, className = "" }: StatsBarProps
   return (
     <section
       ref={containerRef}
-      className={`bg-primary-dark py-12 lg:py-16 ${className}`}
+      className={`bg-primary-dark py-12 lg:py-16 ${className}`} data-nocms-component="content/stats-bar"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
@@ -55,11 +55,11 @@ export function StatsBar({ stats = defaultStats, className = "" }: StatsBarProps
               }`}
               style={{ transitionDelay: `${i * 150}ms` }}
             >
-              <p className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-2">
+              <p className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-2" data-role="heading">
                 {stat.value}
                 {stat.suffix && <span className="text-white/70">{stat.suffix}</span>}
               </p>
-              <p className="text-white/75 text-sm font-medium uppercase tracking-wider">
+              <p className="text-white/75 text-sm font-medium uppercase tracking-wider" data-role="subheading">
                 {stat.label}
               </p>
             </div>
