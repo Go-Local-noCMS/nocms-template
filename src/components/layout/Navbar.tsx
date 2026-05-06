@@ -52,7 +52,7 @@ export function Navbar({
         scrolled
           ? "bg-primary shadow-lg shadow-primary/15"
           : "bg-primary"
-      }`}
+      }`} data-nocms-component="layout/navbar"
     >
       {/* Skip link */}
       <a
@@ -199,7 +199,7 @@ export function Navbar({
               </a>
               <a
                 href={ctaHref}
-                className="block text-center bg-secondary text-white font-semibold px-6 py-3 rounded-md shadow-lg"
+                className="block text-center bg-secondary text-white font-semibold px-6 py-3 rounded-md shadow-lg" data-role="cta"
               >
                 {ctaText}
               </a>

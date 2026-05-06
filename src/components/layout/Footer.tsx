@@ -28,7 +28,7 @@ export function Footer({
   };
 
   return (
-    <footer className="bg-rich-brown text-white/90 relative overflow-hidden">
+    <footer className="bg-rich-brown text-white/90 relative overflow-hidden" data-nocms-component="layout/footer">
       {/* Top accent line */}
       <div className="h-1 bg-gradient-to-r from-primary/0 via-primary to-primary/0" />
 
@@ -46,7 +46,7 @@ export function Footer({
                 {brandName}
               </span>
             </div>
-            <p className="text-white/65 text-sm leading-relaxed">
+            <p className="text-white/65 text-sm leading-relaxed" data-role="subheading">
               {skinConfig.tagline}. We are here to support you and your family through every step of the senior living journey.
             </p>
           </div>
@@ -76,7 +76,7 @@ export function Footer({
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12 mb-12">
           {columns.map((col) => (
             <div key={col.title}>
-              <h3 className="font-heading text-sm font-semibold text-white tracking-wide uppercase mb-4">
+              <h3 className="font-heading text-sm font-semibold text-white tracking-wide uppercase mb-4" data-role="heading">
                 {col.title}
               </h3>
               <ul className="space-y-2.5">
